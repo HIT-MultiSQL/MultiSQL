@@ -1,0 +1,17 @@
+Graph Mode
+What is Graph Mode?
+The graph mode is an open-source NewSQL Database that supports split and transfer workloads by Q Learning method.
+Quick Start:
+To start use the graph mode, you should have a basic Python 3.7(or above) environment, with MySQL 5.7 and Neo4j 3.5.14(Running).
+In addition, some package are needed:
+py2neo==3.1.2
+pymysql
+To start using:
+1. Load data into MySQL, which must conform to the following format:
+The column should be: s p o, and data can only load into one table.
+2. Start Neo4j server and wait for 30 seconds:
+Your-Neo4j-Home/neo4j start
+3. Fill your own config file, the sample file named 'config.ini' is in the same folder.
+4. Put your files(workloads, data) in the corresponding folder of your choice.
+5. In the folder of config file, start the Python application:
+python3 QLearning.py [Your-config-filepath]
